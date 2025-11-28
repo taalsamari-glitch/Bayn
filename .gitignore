@@ -101,3 +101,6 @@ docker-data/
 # -----------------------------------
 .DS_Store
 Thumbs.db
+
+all_voice_ids.py
+uploading_avatar.py

@@ -19,7 +19,7 @@ class LandmarkRecognitionService:
         # For now, it just returns a fixed value
         def _dummy_model():
             # Here we'll call the real local model later
-            return "almasmak"
+            return "ithraa"
 
         landmark_name = await asyncio.to_thread(_dummy_model)
         return landmark_name

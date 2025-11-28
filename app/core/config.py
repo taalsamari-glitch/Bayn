@@ -4,9 +4,8 @@ from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parent.parent  # app/core -> app
 
 class Settings(BaseSettings):
-    AZURE_TTS_KEY: str
-    AZURE_TTS_REGION: str
-    AZURE_TTS_VOICE: str = "en-US-GuyNeural"
+    VISIONSTORY_API_KEY: str
+    VISIONSTORY_AVATAR_ID: str
 
     DESCRIPTIONS_FILE_PATH: Path = BASE_DIR / "data" / "landmarks_descriptions.csv"
 

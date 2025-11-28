@@ -4,7 +4,6 @@ from app.core.config import settings
 
 @lru_cache(maxsize=1)
 def _load_landmark_descriptions() -> dict[str, str]:
-    # 👀 Debugging line (you can keep it or remove later)
     print("Loading descriptions from:", settings.DESCRIPTIONS_FILE_PATH)
 
     df = pd.read_csv(settings.DESCRIPTIONS_FILE_PATH)
