@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Bayn</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="relative text-[#5B3A29]">
+
+  <!-- ===================== VIDEO BACKGROUND ===================== -->
+  <video
+    class="fixed inset-0 w-full h-full object-cover z-0"
+    autoplay muted loop playsinline
+  >
+    <source src="assets/horse-background.mp4" type="video/mp4" />
+  </video>
+
+  <!-- DARK OVERLAY -->
+  <div class="fixed inset-0 bg-black/50 z-0"></div>
+
+  <!-- ===================== PAGE CONTENT ===================== -->
+  <div class="relative z-10 min-h-screen flex flex-col">
+<!-- ===================== header ===================== -->
+<header class="w-full bg-black/30 backdrop-blur-md border-b border-white/20">
+  <div class="max-w-5xl mx-auto px-4 py-3 flex items-center justify-between text-white">
+
+    <!-- Title (Vertical stacked) -->
+    <div class="flex flex-col leading-tight">
+      <h1 class="text-3xl font-bold text-white tracking-wide">
+        بيّــــــن
+      </h1>
+
+      <!-- English name adjusted (Bayn) -->
+      <span class="text-[11px] opacity-70 tracking-wide text-white translate-x-1 mt-0.5">
+        Bayn
+      </span>
+    </div>
+
+    <!-- Back button -->
+    <a href="index.html" class="text-xs opacity-70 hover:opacity-100">
+      ← Back to Home
+    </a>
+
+  </div>
+</header>
+
+    <!-- MAIN CONTENT -->
+    <main class="flex-1">
+    <div class="max-w-5xl mx-auto px-4 pt-20 pb-30 space-y-12">
+<!-- Welcome line above upload box -->
+    <h1 class="text-center text-xl md:text-2xl tracking-wide text-[#F8E8CF] mb-4">
+    Your journey starts here
+    </h1>
+
+
+
+
+        <!-- ===================== UPLOAD BOX ===================== -->
+        <section class="bg-[#F8E8CF]/90 backdrop-blur-md rounded-3xl border border-[#DFBF96]/60 shadow-lg px-6 py-8 space-y-6">
+
+          <h2 class="text-xl font-semibold">Upload a Saudi landmark image</h2>
+
+          <form id="upload-form" class="space-y-4">
+            <input
+              type="file"
+              id="image-input"
+              accept="image/*"
+              class="block w-full bg-[#FDF3E3] border border-[#DFBF96 rounded-xl p-2 cursor-pointer"
+            />
+            <button
+              type="submit"
+              class="px-6 py-2 rounded-full bg-[#5B3A29] text-[#F8E8CF] text-sm font-semibold shadow hover:bg-[#3f281b] transition">
+              Start Now
+            </button>
+          </form>
+
+          <!-- ERROR -->
+          <p id="error"
+             class="hidden text-xs text-[#5B3A29] bg-[#FDE2E2] border border-[#F5B5B5] rounded-xl px-3 py-2">
+          </p>
+
+          <!-- PREVIEW -->
+          <div id="preview" class="hidden">
+            <h3 class="font-semibold text-sm mb-2">Image preview</h3>
+            <img id="preview-img"
+                 class="w-full max-h-80 object-cover rounded-xl border border-[#C99D68]" />
+          </div>
+
+          <!-- RESULT -->
+          <div id="result" class="hidden pt-6 border-t border-[#C99D68]/60 space-y-4">
+            <h3 class="font-semibold text-lg">Welcome to</h3>
+            <p>Landmark: <span id="landmark-name" class="font-bold"></span></p>
+            <p id="landmark-desc" class="text-sm"></p>
+
+            <h3 class="font-semibold text-lg mt-4">For more information </h3>
+            <div
+              id="video-container"
+              class="aspect-video bg-[#FDF3E3] rounded-xl border border-[#C99D68] flex items-center justify-center text-sm text-[#5B3A29]">
+              The video will appear here.
+            </div>
+          </div>
+
+        </section>
+
+<!-- ===================== IMAGE SLIDER (Sand Box Style) ===================== -->
+<section class="space-y-4">
+
+  <h3 class="text-xl font-semibold text-[#F8E8CF]">Discover Saudi landmarks</h3>
+
+  <!-- Sandy Box Wrapper -->
+  <div class="bg-[#F8E8CF]/90 backdrop-blur-md border border-[#C99D68]/70 
+              rounded-3xl shadow-xl p-4 md:p-6">
+
+    <div class="relative w-full h-56 md:h-64 rounded-2xl overflow-hidden 
+                shadow-2xl bg-black/30 backdrop-blur-xl">
+
+      <!-- Slide 1 -->
+      <div class="about-slide absolute inset-0 opacity-100 transition-opacity duration-700">
+        <img src="./assets/1.JPG" class="w-full h-full object-cover" />
+        <div class="absolute bottom-0 bg-black/50 text-white text-sm px-3 py-2">
+          Albalad – Jeddah
+        </div>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="about-slide absolute inset-0 opacity-0 transition-opacity duration-700">
+        <img src="./assets/2.JPG" class="w-full h-full object-cover" />
+        <div class="absolute bottom-0 bg-black/50 text-white text-sm px-3 py-2">
+          Fifa Mountains – Jazan
+        </div>
+      </div>
+
+      <!-- Slide 3 -->
+      <div class="about-slide absolute inset-0 opacity-0 transition-opacity duration-700">
+        <img src="./assets/3.JPG" class="w-full h-full object-cover" />
+        <div class="absolute bottom-0 bg-black/50 text-white text-sm px-3 py-2">
+          Asiri Forts – Asir
+        </div>
+      </div>
+
+      <!-- Arrows -->
+      <button id="about-prev"
+              class="absolute left-2 top-1/2 -translate-y-1/2 bg-black/40 text-white 
+                     rounded-full w-8 h-8 hover:bg-black/60">
+        ‹
+      </button>
+
+      <button id="about-next"
+              class="absolute right-2 top-1/2 -translate-y-1/2 bg-black/40 text-white 
+                     rounded-full w-8 h-8 hover:bg-black/60">
+        ›
+      </button>
+
+    </div>
+
+  </div>
+</section>
+
+        <!-- ===================== TEAM DROPDOWN ===================== -->
+<section class="space-y-4 bg-white/10 backdrop-blur-xl rounded-2xl border border-white/20 p-6">
+
+  <!-- Title with toggle arrow -->
+  <button 
+    id="team-toggle" 
+    class="flex items-center justify-between w-full text-white text-xl font-semibold">
+    
+    The developers Behind Bayn
+    <span id="team-arrow" class="text-2xl transition-transform duration-300">▸</span>
+  </button>
+
+  <!-- Animated dropdown -->
+  <div id="team-content" 
+       class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
+
+    <div class="mt-4 flex flex-col gap-3">
+
+      <!-- Member 1 -->
+      <div class="bg-white/20 backdrop-blur-md border border-white/30 rounded-xl p-4 text-white">
+        <p class="font-semibold">Tahani Alsmari</p>
+        <a href="https://www.linkedin.com/in/tahani-alsamari/" class="underline text-xs text-white">LinkedIn</a>
+      </div>
+
+      <!-- Member 2 -->
+      <div class="bg-white/20 backdrop-blur-md border border-white/30 rounded-xl p-4 text-white">
+        <p class="font-semibold">Aljawharah Alhuqbani</p>
+
+        <a href="https://www.linkedin.com/in/aljawharah-alhuqbani-74641a358?utm_source=share_via&utm_content=profile&utm_medium=member_ios
+        " class="underline text-xs text-white">LinkedIn</a>
+      </div>
+        <!-- Member 3 -->
+      <div class="bg-white/20 backdrop-blur-md border border-white/30 rounded-xl p-4 text-white">
+        <p class="font-semibold">Faris Alshunrani</p>
+
+        <a href="https://www.linkedin.com/in/faris-alshumrani-036751227?utm_source=share_via&utm_content=profile&utm_medium=member_ios" class="underline text-xs text-white">LinkedIn</a>
+      </div>
+        <!-- Member 4 -->
+      <div class="bg-white/20 backdrop-blur-md border border-white/30 rounded-xl p-4 text-white">
+        <p class="font-semibold">Abdullah Al-Harbi</p>
+
+        <a href="https://www.linkedin.com/in/eng-abdullah-al-harbi-823450350/?utm_source=share_via&utm_content=profile&utm_medium=member_ios" class="underline text-xs text-white">LinkedIn</a>
+      </div>
+        <!-- Member 5 -->
+      <div class="bg-white/20 backdrop-blur-md border border-white/30 rounded-xl p-4 text-white">
+        <p class="font-semibold">Khalead Jaafari</p>
+
+        <a href="https://www.linkedin.com/in/khaledjaafari?utm_source=share_via&utm_content=profile&utm_medium=member_ios" class="underline text-xs text-white">LinkedIn</a>
+      </div>
+        <!-- Member 6 -->
+      <div class="bg-white/20 backdrop-blur-md border border-white/30 rounded-xl p-4 text-white">
+        <p class="font-semibold">Jnaa Rumaih</p>
+
+        <a href="https://www.linkedin.com/in/jana-alrumaih-79a927343?utm_source=share_via&utm_content=profile&utm_medium=member_ios" class="underline text-xs text-white">LinkedIn</a>
+      </div>
+        <!-- Member 7 -->
+      <div class="bg-white/20 backdrop-blur-md border border-white/30 rounded-xl p-4 text-white">
+        <p class="font-semibold">Mudhawi Alshiha</p>
+
+        <a href="https://www.linkedin.com/in/mudhawi-alshiha?utm_source=share_via&utm_content=profile&utm_medium=member_ios" class="underline text-xs text-white">LinkedIn</a>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+</main>
+
+
+
+
+<!-- FOOTER -->
+<footer class="mt-10 py-3 text-center text-[#5B3A29] text-[11px] bg-[#F8E8CF] border-t border-[#F8E8CF]">
+  © 2025 Bayn — All rights reserved.
+</footer>
+
+<!-- SCRIPTS (لا تكرار هنا) -->
+<script src="script.js"></script>
+
+</body>
+</html>
+
+
+

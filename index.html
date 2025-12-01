@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Bayn – Discover Saudi Landmarks</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-[#E4C49B] text-[#5B3A29] min-h-screen flex flex-col">
+
+  <!-- HERO SECTION WITH VIDEO BACKGROUND -->
+  <section class="relative w-full min-h-[90vh] flex items-center overflow-hidden">
+
+    <!-- Background video -->
+    <video class="absolute inset-0 w-full h-full object-cover" autoplay muted loop playsinline>
+      <source src="assets/horse-background.mp4" type="video/mp4" />
+    </video>
+
+    <!-- Overlay -->
+    <div class="absolute inset-0 bg-gradient-to-b from-black/70 via-black/40 to-transparent"></div>
+
+    <!-- HERO CONTENT -->
+    <div class="relative z-10 w-full max-w-4xl mx-auto px-4 py-10 text-center flex flex-col items-center">
+
+      <!-- TITLE -->
+      <h1 class="text-white font-bold tracking-wide leading-tight"
+          style="font-size: 70px; line-height: 1.1;">
+       بيّـــن
+      </h1>
+
+      <p class="text-white/70 text-xl md:text-2xl mt-1 tracking-wide">
+        Bayn
+      </p>
+
+      <!-- TAGLINE -->
+      <p class="text-slate-100 text-base md:text-lg mt-6 max-w-xl leading-relaxed">
+        Capture the moment — let AI reveal the story behind it.
+      </p>
+
+      <!-- BUTTON -->
+      <a
+        href="app.html"
+        class="mt-6 inline-flex items-center justify-center px-8 py-3 rounded-full bg-[#DFBF96]
+               text-[#5B3A29] font-semibold text-base shadow-md hover:bg-[#f3d7a9] transition"
+      >
+        Try it now
+      </a>
+
+      <!-- FEATURE BOXES -->
+      <div class="w-full mt-12 grid grid-cols-1 md:grid-cols-3 gap-4 px-3">
+
+        <!-- What is Bayn -->
+        <div class="bg-white/15 backdrop-blur-sm border border-white/20
+                    rounded-2xl p-5 text-white shadow-md hover:bg-white/20 transition">
+          <h3 class="text-lg font-semibold mb-2">What is Bayn?</h3>
+          <p class="text-sm text-white/80">
+            An AI-powered system that recognizes Saudi landmarks from a single image.
+          </p>
+        </div>
+
+        <!-- Features -->
+        <div class="bg-white/15 backdrop-blur-sm border border-white/20
+                    rounded-2xl p-5 text-white shadow-md hover:bg-white/20 transition">
+          <h3 class="text-lg font-semibold mb-2">Bayn Features</h3>
+          <p class="text-sm text-white/80">
+            Your journey becomes richer, easier, and more magical with every image you capture.
+          </p>
+        </div>
+
+        <!-- How it works -->
+        <div class="bg-white/15 backdrop-blur-sm border border-white/20
+                    rounded-2xl p-5 text-white shadow-md hover:bg-white/20 transition">
+          <h3 class="text-lg font-semibold mb-2">How it works</h3>
+          <p class="text-sm text-white/80">
+            Capture → Upload → Watch your landmark come to life.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+
+  <!-- FOOTER -->
+   <footer class="py-3 text-center text-[#5B3A29] text-[11px] bg-[#DFBF96] border-t border-[#DFBF96]">
+  © 2025 Bayn — All rights reserved.
+</footer>
+
+
+</body>
+</html>
