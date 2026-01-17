@@ -1,6 +1,6 @@
 # Bayn — Smart Tourism Landmarks System
 
-![Bayn Logo](assets/logo.png)
+<img src="assets/logo.png" alt="Bayn Logo" width="150">
 
 ## ✨ About
 
