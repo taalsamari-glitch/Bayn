@@ -26,7 +26,7 @@ The project consists of:
 
 ---
 
-Project Structure
+### Project Structure
 
 Bayn/
 ├─ frontend/ ← Frontend files
