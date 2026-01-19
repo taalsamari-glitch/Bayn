@@ -28,16 +28,21 @@ The project consists of:
 
 ### Project Structure
 
+
+
+### 📂 Project Structure
+
+```bash
 Bayn/
-├─ frontend/ ← Frontend files
-├─ backend/ ← Backend files
-├─ model/ ← ML/AI model files
-├─ assets/ ← Images and static files
-├─ README.md
-├─ .gitignore
-└─ license
+├──  frontend/          # Modern Interface (HTML, CSS, JS)
+├──  backend/           # API & Logic (FastAPI / Flask)
+├──  model/             # AI/ML Model files
+├──  assets/            # Images & Static resources
+├──  .gitignore         # Files to ignore in Git
+├──  README.md          # Project documentation
+└──  license            # MIT License
 
-
+```
 ---
 
 ## Technologies
