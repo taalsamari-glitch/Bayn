@@ -53,7 +53,15 @@ Bayn/
 * **Version Control:** Git & GitHub
 
 ---
+##  Artificial Intelligence & Model Architecture
+The core of **Bayn** is powered by a state-of-the-art Deep Learning model to ensure high-speed and accurate landmark recognition.
 
+* **Model Architecture:** Utilized **ConvNeXt V2**, a cutting-edge convolutional neural network that represents the state-of-the-art in visual recognition.
+* **Performance:** Achieved an impressive accuracy of **94.4%** on the validation dataset, demonstrating high reliability in landmark classification.
+* **Development Environment:** Model training and fine-tuning were conducted within a **Google Colab** environment using **Python**.
+* **Optimization:** Applied advanced image preprocessing and augmentation techniques to ensure robust classification under various environmental conditions.
+
+---
 ##  Dataset
 
 The model was trained using a collection of Saudi landmark images and details.  
